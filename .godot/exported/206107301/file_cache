@@ -175,6 +175,6 @@ res://Source/Free/20 Enemies.png::73730ecfde474d999a027b06288751b6516548b78e65c7
 res://Source/Free/Hello.png::a55305158db44491131714a2496e60547fdea76ec968753d745716564306f0c6::1699027145::res://.godot/exported/206107301/export-1ffb16edc1ffe51635cba8f20b7fad74-Hello.res
 res://icon.svg::43b305bd3d55f8faec5e5175cbe35533b11a1468eb70b85b12cafd5f8cc72771::1699027145::res://.godot/exported/206107301/export-218a8f2b3041327d8a5756f3a245f83b-icon.res
 res://main_scene.gd::a95ab7641bf307cb34c721c5dd29fe8d::1731996358::
-res://main_scene.tscn::af8daefd64a4b735f77aedef1a9d904e::1731996466::res://.godot/exported/206107301/export-fac9db9380da720a7609154e1ecab771-main_scene.scn
-res://player.gd::5629c7a7729b4f28d7a6e97b2ac6ebab::1731996297::
-res://player.tscn::a2211e3d1f97e97b4cc48e830b15663c::1731996432::res://.godot/exported/206107301/export-36a25e342948d0ceacc500772b5412b3-player.scn
+res://main_scene.tscn::af8daefd64a4b735f77aedef1a9d904e::1731997131::res://.godot/exported/206107301/export-fac9db9380da720a7609154e1ecab771-main_scene.scn
+res://player.gd::c98632366c202e1d4a60972fa6f1e87b::1731997115::
+res://player.tscn::a2211e3d1f97e97b4cc48e830b15663c::1731997216::res://.godot/exported/206107301/export-36a25e342948d0ceacc500772b5412b3-player.scn

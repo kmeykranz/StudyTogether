@@ -22,7 +22,6 @@ func _on_create_button_down() -> void:
 	multiplayer.peer_connected.connect(_on_peer_connected)
 	# 客户端创建成功后，在当前场景添加玩家
 	# multiplayer.get_unique_id()用于获取当前客户端的唯一id，作为服务器的客户端，一般id均为1
-	add_player(multiplayer.get_unique_id())
 
 func add_player(id: int) -> void:
 	var player = PLAYER.instantiate()

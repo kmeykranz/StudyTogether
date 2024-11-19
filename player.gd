@@ -13,7 +13,7 @@ func _enter_tree() -> void:
 	pass
 
 func _ready() -> void:
-	position = Vector2(100,0)
+	position = Vector2(200,200)
 
 func _physics_process(delta: float) -> void:
 	# 如果不是该节点的控制者，则无法移动，直接终止方法
@@ -25,38 +25,20 @@ func _physics_process(delta: float) -> void:
 	# 鼠标点击
 	if Input.is_action_just_pressed("click"):
 		MousePos=get_global_mouse_position();
-		print("mouse clicked")
-	
 	move(delta)
 
 func move(delta) -> void:
-	var direction=0;
+	var direction=Vector2.ZERO
 	
 	if MousePos:
-		if MousePos.distance_to(position)>0:
-			if MousePos.x>position.x-5 && MousePos.x<position.x+5:
-				velocity.x=0;
-			else:
-				if MousePos.x>position.x:
-					direction=1;
-				else:
-					direction=-1;
-			#if MousePos.y>position.y-5&& MousePos.y<position.y+5:
-				#velocity.y=0;
-			#else:
-				#if MousePos.y>position.y:
-					#velocity.y=1*SPEED;
-				#else:
-					#velocity.y=-1*SPEED;
+		direction=(MousePos-position).normalized()
 
 	# 设置角色移动速度
-	velocity.x = direction * 100
-	# 设置玩家重力加速度
-	velocity.y += ProjectSettings.get("physics/2d/default_gravity") * delta
+	velocity=direction*100;
 	# 如果存在水平方向的运动
-	if not is_zero_approx(direction):
-		# 设置对应的朝向
-		graphic.scale.x = 1 if direction > 0 else -1
+	if not is_zero_approx(direction.x):
+		#设置对应的朝向
+		graphic.scale.x = 1 if direction.x > 0 else -1
 		# 执行函数，执行动画
 		update_player_animation.rpc("run")
 	else:
@@ -64,6 +46,7 @@ func move(delta) -> void:
 		update_player_animation.rpc("idle")
 	# 玩家移动
 	move_and_slide()
+	sync_position.rpc(position)
 
 # "authority"：只有多人权限（服务器）才能远程调用
 # "any_peer"：允许客户远程呼叫。对于传输用户输入很有用
@@ -77,3 +60,6 @@ func move(delta) -> void:
 func update_player_animation(animation_name:String) -> void:
 	# 播放指定动画
 	animation_player.play(animation_name)
+@rpc("authority","call_local")
+func sync_position(pos: Vector2):
+	position=pos;

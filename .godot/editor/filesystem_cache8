@@ -1,10 +1,11 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1731994312
+::res://::1732000754
+export_presets.cfg::TextFile::-1::1732000315::0::1::::<><>::
 icon.svg::CompressedTexture2D::172996405115505650::1699027145::1699033155::1::::<><>::
-main_scene.gd::GDScript::-1::1699027145::0::1::::<>Node2D<>::
-main_scene.tscn::PackedScene::5634098077507205515::1699292369::0::1::::<><>::res://main_scene.gd<>uid://c7psgrf28q1a7::::res://Source/Free/Terrain/Terrain (16x16).png<>uid://cadpb6xpg6qty::::res://Source/Free/Background/Green.png
-player.gd::GDScript::-1::1699027145::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::7744738864510638395::1699292369::0::1::::<><>::uid://ckqmyoah8lj8f::::res://Source/Free/Main Characters/Virtual Guy/Idle (32x32).png<>res://player.gd<>uid://b44bc6kop2tus::::res://Source/Free/Main Characters/Virtual Guy/Run (32x32).png
+main_scene.gd::GDScript::-1::1732000044::0::1::::<>Node2D<>::
+main_scene.tscn::PackedScene::5634098077507205515::1732000685::0::1::::<><>::res://main_scene.gd<>uid://c7psgrf28q1a7::::res://Source/Free/Terrain/Terrain (16x16).png<>uid://cadpb6xpg6qty::::res://Source/Free/Background/Green.png
+player.gd::GDScript::-1::1732000682::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::7744738864510638395::1732000686::0::1::::<><>::uid://ckqmyoah8lj8f::::res://Source/Free/Main Characters/Virtual Guy/Idle (32x32).png<>res://player.gd<>uid://b44bc6kop2tus::::res://Source/Free/Main Characters/Virtual Guy/Run (32x32).png
 ::res://Source/::1699027144
 ::res://Source/Free/::1699033154
 20 Enemies.png::CompressedTexture2D::3337490016926627897::1699027145::1699033155::1::::<><>::
